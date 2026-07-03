@@ -86,12 +86,23 @@ function App() {
           </p>
         </div>
 
-        <input
-          type="text"
-          placeholder="Search element..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <div className="topbar-actions">
+          <a
+            className="back-link"
+            href="https://chemkit.vercel.app/"
+            target="_self"
+            rel="noreferrer"
+          >
+            Back to ChemKit
+          </a>
+
+          <input
+            type="text"
+            placeholder="Search element..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
       </header>
 
       <section className="filters">

@@ -17,6 +17,7 @@ body {
   min-width: 320px;
   color: #f8fafc;
   background: transparent;
+  overflow-x: hidden;
 }
 
 button,

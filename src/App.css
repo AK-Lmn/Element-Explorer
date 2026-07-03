@@ -38,6 +38,46 @@
   line-height: 1.5;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  background: linear-gradient(135deg, rgba(18, 24, 36, 0.95), rgba(12, 18, 30, 0.95));
+  color: #eaf6ff;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(125, 211, 252, 0.45);
+  background: linear-gradient(135deg, rgba(25, 35, 54, 0.98), rgba(15, 20, 34, 0.98));
+  color: #8bd3ff;
+}
+
+.back-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.35);
+}
+
 .topbar input {
   padding: 0.95rem 1.05rem;
   border-radius: 16px;
@@ -154,14 +194,14 @@
   padding-bottom: 0.35rem;
   scrollbar-gutter: stable;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .periodic-grid-scroll {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   min-width: fit-content;
+  width: max-content;
 }
 
 .empty-state {
@@ -449,8 +489,18 @@
     gap: 1rem;
   }
 
+  .topbar-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .back-link,
+  .topbar input {
+    width: 100%;
+  }
+
   .periodic-panel {
-    padding: 0.85rem;
+    padding: 0.7rem;
     border-radius: 22px;
   }
 
@@ -465,26 +515,27 @@
   }
 
   .periodic-layout {
-    grid-template-columns: repeat(18, 58px);
-    grid-template-rows: repeat(9, 78px);
+    grid-template-columns: repeat(18, 54px);
+    grid-template-rows: repeat(9, 74px);
+    gap: 0.35rem;
   }
 
   .element {
-    min-height: 78px;
-    padding: 0.45rem;
+    min-height: 74px;
+    padding: 0.35rem;
     border-radius: 12px;
   }
 
   .favorite-btn {
-    top: 0.25rem;
-    right: 0.25rem;
-    width: 1.45rem;
-    height: 1.45rem;
-    font-size: 0.72rem;
+    top: 0.22rem;
+    right: 0.22rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.64rem;
   }
 
-  .element h2 { font-size: 1.15rem; }
-  .name { font-size: 0.5rem; }
+  .element h2 { font-size: 1rem; }
+  .name { font-size: 0.47rem; }
   .modal { padding: 1.3rem; }
   .modal h1 { font-size: 3rem; }
   .info-grid { grid-template-columns: 1fr; }
