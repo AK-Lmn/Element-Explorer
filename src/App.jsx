@@ -233,85 +233,87 @@ function App() {
                 ×
               </button>
 
-              <div className="modal-hero">
-                <div>
-                  <p className="modal-label">
-                    Atomic #{selectedElement.atomicnumber}
-                  </p>
+              <div className="modal-scroll">
+                <div className="modal-hero">
+                  <div>
+                    <p className="modal-label">
+                      Atomic #{selectedElement.atomicnumber}
+                    </p>
 
-                  <h1>{selectedElement.symbol}</h1>
+                    <h1>{selectedElement.symbol}</h1>
 
-                  <h2>{selectedElement.name}</h2>
+                    <h2>{selectedElement.name}</h2>
 
-                  <span className="category-badge">
-                    {selectedElement.category}
-                  </span>
-                </div>
+                    <span className="category-badge">
+                      {selectedElement.category}
+                    </span>
+                  </div>
 
-                <div className="atom-visual">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <div className="nucleus">
-                    {selectedElement.symbol}
+                  <div className="atom-visual">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div className="nucleus">
+                      {selectedElement.symbol}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="quick-stats">
-                <div>
-                  <span>Group</span>
-                  <p>{selectedElement.group}</p>
+                <div className="quick-stats">
+                  <div>
+                    <span>Group</span>
+                    <p>{selectedElement.group}</p>
+                  </div>
+
+                  <div>
+                    <span>Period</span>
+                    <p>{selectedElement.period}</p>
+                  </div>
+
+                  <div>
+                    <span>Block</span>
+                    <p>{selectedElement.block}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <span>Period</span>
-                  <p>{selectedElement.period}</p>
-                </div>
+                <div className="info-grid">
+                  <div>
+                    <span>Atomic Weight</span>
+                    <p>{selectedElement.atomicweight}</p>
+                  </div>
 
-                <div>
-                  <span>Block</span>
-                  <p>{selectedElement.block}</p>
-                </div>
-              </div>
+                  <div>
+                    <span>Standard Weight</span>
+                    <p>{selectedElement.atomicweightfull}</p>
+                  </div>
 
-              <div className="info-grid">
-                <div>
-                  <span>Atomic Weight</span>
-                  <p>{selectedElement.atomicweight}</p>
-                </div>
+                  <div>
+                    <span>Occurrence</span>
+                    <p>{selectedElement.occurrence}</p>
+                  </div>
 
-                <div>
-                  <span>Standard Weight</span>
-                  <p>{selectedElement.atomicweightfull}</p>
-                </div>
+                  <div>
+                    <span>State / Origin</span>
+                    <p>{selectedElement.stateofmatter}</p>
+                  </div>
 
-                <div>
-                  <span>Occurrence</span>
-                  <p>{selectedElement.occurrence}</p>
-                </div>
+                  <div>
+                    <span>Valence Electrons</span>
+                    <p>{selectedElement.valenceElectrons}</p>
+                  </div>
 
-                <div>
-                  <span>State / Origin</span>
-                  <p>{selectedElement.stateofmatter}</p>
-                </div>
+                  <div>
+                    <span>Table Position</span>
+                    <p>
+                      Row {selectedElement.tablerow18col}, Column{" "}
+                      {selectedElement.tablecolumn18col}
+                    </p>
+                  </div>
 
-                <div>
-                  <span>Valence Electrons</span>
-                  <p>{selectedElement.valenceElectrons}</p>
-                </div>
-
-                <div>
-                  <span>Table Position</span>
-                  <p>
-                    Row {selectedElement.tablerow18col}, Column{" "}
-                    {selectedElement.tablecolumn18col}
-                  </p>
-                </div>
-
-                <div className="full">
-                  <span>Electron Configuration</span>
-                  <p>{selectedElement.electronConfiguration}</p>
+                  <div className="full">
+                    <span>Electron Configuration</span>
+                    <p>{selectedElement.electronConfiguration}</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
